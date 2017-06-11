@@ -26,6 +26,7 @@ int main() {
     }
   }
 
+  /* Horizontal histogram */
   for (i = 1; i < 31; ++i) {
     if (word_counts[i] != 0) {
       printf("%d characters:\t", i);
@@ -38,15 +39,29 @@ int main() {
     }
   }
 
-  /*
-  while (for (i = 0; i < 31; ++i) {word_counts[i] != 0}) {
-    for (i = 1; i < 31; ++i) {
-      if (word_counts[i] > 0) {
-        printf("  |  ");
-      }
-      printf("\n");
-    }
+  /* Vertical histogram */
+  // int j;
+  // i = n = j = 0;
+  // int highest_count = 0;
 
-  }
-  */
+  // for (j = 1; j < 31; ++j) {
+  //   if (highest_count < word_counts[j])
+  //     highest_count = word_counts[j];
+  // }
+
+  // while (n < highest_count) {
+  //   for (i = 1; i < 31; ++i) {
+  //     if (word_counts[i] > 0)
+  //       printf(" . ");
+  //     else
+  //       printf ("   ");
+  //   }
+  //   for (i = 1; i < 31; ++i) {
+  //     --word_counts[i];
+  //   }
+  //   printf("\n");
+  //   ++n;
+  // }
+
+
 }
