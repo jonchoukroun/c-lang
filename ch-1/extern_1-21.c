@@ -39,26 +39,30 @@ int read_line() {
 }
 
 void replace_spaces() {
-  int i, state;
+  int i, n, state;
 
+  n = 0;
   state = OUT;
   for (i = 0; i < LINELENGTH; ++i) {
     if (line[i] == ' ') {
       if (state == IN) {
-        new_line[i] = '\t';
+        new_line[n] = '\t';
         state = OUT;
       } else {
-        new_line[i] = ' ';
         state = IN;
+        --n;
       }
     } else {
       if (state == IN) {
-        new_line[i] = line[i];
+        new_line[n] = ' ';
+        ++n;
+        new_line[n] = line[i];
         state = OUT;
       } else {
-        new_line[i] = line[i];
+        new_line[n] = line[i];
       }
     }
+    ++n;
   }
 
 }
