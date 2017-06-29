@@ -5,8 +5,8 @@
 void squeeze(char s[], char t[]);
 
 int main() {
-  char s[LENGTH] = "hey nong man\0";
-  char t[LENGTH] = "non\0";
+  char s[LENGTH] = "abcdefghijklmnopqrstuvwxyz\0";
+  char t[LENGTH] = "abcdefghijklmnopqrstuvwxyz";
 
   squeeze(s, t);
 
@@ -25,6 +25,10 @@ void squeeze(char s[], char t[]) {
     s[j++] = s[i];
   }
   s[j] = '\0';
+
+  if (s[i = 0] == '\0') {
+    printf("empty string\n");
+  }
 
   for (i = 0; s[i] != '\0'; ++i) {
     printf("%c", s[i]);
