@@ -14,11 +14,21 @@ int main() {
 
 int get_index(int a, int b[]) {
 
-  for (int i = 0; i < 6; ++i) {
+  int i = 6;
+  int index = -1;
+  while (i < 0 && index == -1) {
     if (a == b[i]) {
-      return i;
+      index = i;
+    } else {
+      --i;
     }
   }
+
+  // for (int i = 0; i < 6; ++i) {
+  //   if (a == b[i]) {
+  //     return i;
+  //   }
+  // }
 
   return -1;
 }
