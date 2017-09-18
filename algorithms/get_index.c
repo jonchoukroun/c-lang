@@ -4,8 +4,8 @@ int get_index(int a, int b[]);
 
 int main() {
 
-  int value = 13;
-  int arr[6] = { 2, 6, 4, 1, 6, 14 };
+  int value = 19;
+  int arr[6] = { 2, 5, 4, 1, 6, 14 };
 
   printf("Index of value: %d\n", get_index(value, arr));
 
@@ -14,21 +14,11 @@ int main() {
 
 int get_index(int a, int b[]) {
 
-  int i = 6;
-  int index = -1;
-  while (i < 0 && index == -1) {
+  for (int i = 0; i < 6; ++i) {
     if (a == b[i]) {
-      index = i;
-    } else {
-      --i;
+      return i;
     }
   }
-
-  // for (int i = 0; i < 6; ++i) {
-  //   if (a == b[i]) {
-  //     return i;
-  //   }
-  // }
 
   return -1;
 }
